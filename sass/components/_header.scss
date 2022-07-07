@@ -1,9 +1,17 @@
 .wrap--header {
   display: flex;
   justify-content: space-around;
-  padding: 25px 15px;
-}
+  padding: 10px 15px;
 
+  @media screen and (min-width: 768px) {
+  padding: 25px 15px;
+  }
+}
+.site-nav {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
 .site-nav__item + .site-nav__item {
   margin-left: 50px;
 }
@@ -44,6 +52,9 @@
 .contacts {
   display: flex;
   margin-left: auto;
+  @media screen and (max-width: 767px) {
+      display: none;
+    }
 }
 
 .contacts__link {
@@ -73,4 +84,118 @@
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+// Mobile - menu---------------------------
+
+.mobile-menu__button {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.mobile-menu__icon-menu,
+.mobile-menu__icon-cross {
+  &:hover,
+  &:focus {
+    fill:$accentColor;
+  }
+}
+
+.mobile-menu__button .mobile-menu__icon-cross {
+  display: none;
+}
+
+.mobile-menu__button.is-open {
+  .mobile-menu__icon-menu {
+    display: none;
+    }
+  .mobile-menu__icon-cross {
+    display: block;
+  }
+}
+.mobile-menu__container {
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+
+  padding-top: 108px;
+  padding-left: 40px;
+  padding-bottom: 48px;
+  text-align: left;
+  
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+
+  background-color: $primaryColor;
+  color: $primaryTextColor;
+
+  &.is-open {
+    display: block;
+  }
+}
+.mobile-menu__nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 306px;
+}
+.mobile-menu__item {
+  & + & {
+    margin-top: 32px;
+  }
+}
+.mobile-menu__link {
+  color: inherit;
+  &--current {
+  color: $accentColor;
+  }
+}
+.mobile-menu__contacts {
+
+  .mobile-menu__phone {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    color: $accentColor;
+  }
+  .mobile-menu__email {
+    display: block;
+    margin-bottom: 64px;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $secondaryTextColor;
+  }
+}
+.mobile-social__item {
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  & + & {
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .mobile-social__link {
+  display: block;
+  color: $accentColor;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  }
 }

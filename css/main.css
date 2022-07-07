@@ -8,12 +8,19 @@ input {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
   display: flex;
 }
 
 header {
+  position: relative;
+  display: block;
+  align-items: center;
   background-color: #ffffff;
   border-bottom-width: 1px;
   border-bottom-color: rgba(236, 236, 236, 0.7);
@@ -35,13 +42,34 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  width: 1200px;
+  width: 100%;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 448px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
@@ -80,7 +108,18 @@ button {
 .wrap--header {
   display: flex;
   justify-content: space-around;
-  padding: 25px 15px;
+  padding: 10px 15px;
+}
+@media screen and (min-width: 768px) {
+  .wrap--header {
+    padding: 25px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    display: none;
+  }
 }
 
 .site-nav__item + .site-nav__item {
@@ -120,6 +159,11 @@ button {
   display: flex;
   margin-left: auto;
 }
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
+}
 
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
@@ -146,14 +190,128 @@ button {
   margin-right: 10px;
 }
 
+.mobile-menu__button {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__button {
+    display: none;
+  }
+}
+
+.mobile-menu__icon-menu:hover, .mobile-menu__icon-menu:focus,
+.mobile-menu__icon-cross:hover,
+.mobile-menu__icon-cross:focus {
+  fill: #2196F3;
+}
+
+.mobile-menu__button .mobile-menu__icon-cross {
+  display: none;
+}
+
+.mobile-menu__button.is-open .mobile-menu__icon-menu {
+  display: none;
+}
+.mobile-menu__button.is-open .mobile-menu__icon-cross {
+  display: block;
+}
+
+.mobile-menu__container {
+  display: none;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  padding-top: 108px;
+  padding-left: 40px;
+  padding-bottom: 48px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  background-color: #ffffff;
+  color: #212121;
+}
+.mobile-menu__container.is-open {
+  display: block;
+}
+
+.mobile-menu__nav {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 306px;
+}
+
+.mobile-menu__item + .mobile-menu__item {
+  margin-top: 32px;
+}
+
+.mobile-menu__link {
+  color: inherit;
+}
+.mobile-menu__link--current {
+  color: #2196F3;
+}
+
+.mobile-menu__contacts .mobile-menu__phone {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+.mobile-menu__contacts .mobile-menu__email {
+  display: block;
+  margin-bottom: 64px;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-social__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.mobile-social__item:first-child {
+  padding-left: 0;
+}
+.mobile-social__item:last-child {
+  padding-right: 0;
+}
+.mobile-social__item + .mobile-social__item {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile-social__item .mobile-social__link {
+  display: block;
+  color: #2196F3;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
 .logo {
   color: #2196F3;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   text-decoration: none;
-  margin-right: 93px;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo--top {
@@ -419,6 +577,7 @@ button {
   color: #2196F3;
   margin: 0;
   padding: 0;
+  text-decoration: underline;
 }
 
 .our-works__image {
