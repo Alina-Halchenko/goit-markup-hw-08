@@ -21,8 +21,8 @@
       <!--Site navigation-->
       <nav>
         <ul class="site-nav">
-          <li class="site-nav__item"><a class="site-nav__link" href="./index.html">Студия</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфолио</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--current" href="./index.html">Студия</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфолио</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="">Контакты</a></li>
         </ul>
       </nav>
@@ -39,8 +39,42 @@
           </svg>
           +38 096 111 11 11</a>
       </div>
+      <!-- ----Mobile-menu---------------- -->
+      <button type="button" class="mobile-menu__button" aria-expanded="false" aria-controls="mobile-menu__container"
+        data-menu-button>
+        <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+          <use class="mobile-menu__icon-menu" href="./images/symbol-defs.svg#mobile-menu"></use>
+          <use class="mobile-menu__icon-cross" href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__container" id="mobile-menu__container" data-menu>
+        <div class="mobile-menu_divider">
+          <div class="mobile-menu__wrap">
+            <ul class="mobile-menu__nav">
+              <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__link--current"
+                  href="./index.html">Студия</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link" href="./portfolio.html">Портфолио</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакты</a></li>
+            </ul>
+          </div>
+  
+          <div class="mobile-menu__wrap">
+            <div class="mobile-menu__contacts">
+              <a class="mobile-menu__phone" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="mobile-menu__email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </div>
+            <ul class="mobile-menu__social mobile-social">
+              <li class="mobile-social__item"><a class="mobile-social__link" href="">Instagram</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="">Twitter</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="">Facebook</a></li>
+              <li class="mobile-social__item"><a class="mobile-social__link" href="">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
+
   <main>
     <section class="section">
       <h1 class="visually-hidden">Наши работы</h1>
@@ -55,7 +89,29 @@
         <ul class="gallery">
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/technokryak.jpg" alt="профайлы людей на экране" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal1_desk.jpg     1x,
+                    ../images/imggal1_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal1_tab.jpg     1x,
+                    ../images/imggal1_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal1-mob.jpg     1x,
+                    ../images/imggal1-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="профайлы людей на экране"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения c разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -69,7 +125,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/new-orlean.jpg" alt="два баскетболиста с мячом" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal2_desk.jpg     1x,
+                    ../images/imggal2_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal2_tab.jpg     1x,
+                    ../images/imggal2_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal2-mob.jpg     1x,
+                    ../images/imggal2-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="два баскетболиста с мячом"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения c разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -83,7 +161,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/seafood.jpg" alt="рыба с надписью" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal3_desk.jpg     1x,
+                    ../images/imggal3_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal3_tab.jpg     1x,
+                    ../images/imggal3_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal3-mob.jpg     1x,
+                    ../images/imggal3-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="рыба с надписью"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -97,7 +197,29 @@
             </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/prime.jpg" alt="наушники" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal4_desk.jpg     1x,
+                    ../images/imggal4_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal4_tab.jpg     1x,
+                    ../images/imggal4_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal4-mob.jpg     1x,
+                    ../images/imggal4-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="наушники"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -111,7 +233,29 @@
             </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/boxes.jpg" alt="две коробки коричневая и белая" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal5_desk.jpg     1x,
+                    ../images/imggal5_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal5_tab.jpg     1x,
+                    ../images/imggal5_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal5-mob.jpg     1x,
+                    ../images/imggal5-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="две коробки коричневая и белая"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -125,7 +269,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/inspiration.jpg" alt="монитор с информацией внутри" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal6_desk.jpg     1x,
+                    ../images/imggal6_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal6_tab.jpg     1x,
+                    ../images/imggal6_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal6-mob.jpg     1x,
+                    ../images/imggal6-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="монитор с информацией внутри"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -139,7 +305,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/limited-edition.jpg" alt="журнал с картинками" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal7_desk.jpg     1x,
+                    ../images/imggal7_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal7_tab.jpg     1x,
+                    ../images/imggal7_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal7-mob.jpg     1x,
+                    ../images/imggal7-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="журнал с картинками"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -153,7 +341,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/lab.jpg" alt="этикетка" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal8_desk.jpg     1x,
+                    ../images/imggal8_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal8_tab.jpg     1x,
+                    ../images/imggal8_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal8-mob.jpg     1x,
+                    ../images/imggal8-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="этикетка"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
@@ -167,7 +377,29 @@
           </li>
           <li class="gallery__item">
             <div class="gallery__wrap">
-              <a href=""><img src="./images/growing-business.jpg" alt="руки человека, печатающего на ноутбуке" width="370"></a>
+              <a href="">
+                <picture>
+                  <source
+                    srcset="
+                    ../images/imggal9_desk.jpg     1x,
+                    ../images/imggal9_desk@2x.jpg  2x
+                    "
+                    media="(min-width: 1200px)"/>
+                  <source
+                    srcset="
+                    ../images/imggal9_tab.jpg     1x,
+                    ../images/imggal9_tab@2x.jpg  2x
+                    "
+                    media="(min-width: 768px )"/>
+                  <source
+                    srcset="
+                    ../images/imggal9-mob.jpg     1x,
+                    ../images/imggal9-mob@2x.jpg  2x
+                    "
+                    media="(width: 480px)"/>
+                  <img src="../images/imgteam1-mobile.jpg" alt="руки человека, печатающего на ноутбуке"/>
+                </picture>
+              </a>
               <div class="gallery__thumb">
                 <p>Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
                   получить
