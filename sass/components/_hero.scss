@@ -1,5 +1,5 @@
 .hero {
-  width: 480px;
+  max-width: 480px;
   height: 400px;
   padding: 118px 60px;
   background-image: linear-gradient(to right,
@@ -10,6 +10,16 @@
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    width: 768px;
+  }
+    @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    width: 1200px;
+    height: 600px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -29,7 +39,34 @@
     background-image: linear-gradient(to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
-      url(../images/imghero-desktop.jpg);
+      url(../images/imghero-tablet.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../images/imghero-tablet@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(../images/imghero-desktop.jpg);
+    }
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -43,29 +80,7 @@
         url(../images/imghero-desktop@2x.jpg);
     }
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    height: 600px;
-    max-width: 1600px;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .hero {
-      background-image: linear-gradient(to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)),
-        url(../images/imghero-mobile@2x.jpg);
-    }
-  }
-}
-
+  
 .hero__title {
   color: $primaryColor;
   font-weight: 900;

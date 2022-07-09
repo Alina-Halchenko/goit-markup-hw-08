@@ -17,12 +17,15 @@ a {
 }
 ul {
   list-style-type: none;
-  display: flex;
+  display: block;
+  
+  @media screen and (min-width: 768px) {
+      display: flex;
+  }
 }
 header {
   position: relative;
   display: block;
-  align-items: center;
 
   background-color: $primaryColor;
   border-bottom-width: 1px;
@@ -52,18 +55,17 @@ img {
 }
 
 .container {
-  width: 100%;
   align-items: center;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 
-  @media screen and (min-width: 480px) {
-    max-width: 448px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    max-width: 480px;
   }
   @media screen and (min-width: 768px) {
-    width: 720px
+    width: 768px;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
@@ -71,12 +73,21 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+    
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
-
 .remove-padding-part {
   padding-top: 0;
+}
+.section.remove-padding-part {
+  @media screen and (max-width: 480px) {
+  padding-bottom: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -92,14 +103,20 @@ img {
 .title {
   color: $primaryTextColor;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
 
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
