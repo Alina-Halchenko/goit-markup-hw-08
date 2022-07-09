@@ -5,7 +5,9 @@
 .benefits__item {
   margin-top: 0;
   margin-bottom: 0;
-  width: 450px;
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
+  }
   @media screen and (min-width: 768px) {
     width: 354px;
   }  

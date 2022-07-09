@@ -113,7 +113,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 999;
+  z-index: 9;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -141,12 +141,13 @@
 }
 .mobile-menu__container {
   display: none;
-  position: absolute;
-  top: -60px;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 
-  padding-top: 108px;
+  padding-top: 48px;
   padding-left: 40px;
   padding-bottom: 48px;
   text-align: left;
@@ -162,10 +163,16 @@
     display: block;
   }
 }
+.mobile-menu_divider {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: auto;
+}
 .mobile-menu__nav {
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 306px;
 }
 .mobile-menu__item {
   & + & {
