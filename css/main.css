@@ -513,7 +513,7 @@ img {
     max-width: 450px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
     overflow: scroll;
@@ -578,7 +578,7 @@ img {
     max-width: 370px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form__field textarea {
     width: 370px;
   }
@@ -634,7 +634,7 @@ img {
     max-width: 370px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .form__input {
     width: 370px;
   }

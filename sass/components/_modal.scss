@@ -36,7 +36,7 @@
   @media screen and (max-width: 479px) {
     max-width: 450px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
     overflow: scroll;
   }
@@ -98,7 +98,7 @@
   @media screen and (max-width: 479px) {
     max-width: 370px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 370px;
   }
   @media screen and (min-width: 1200px) {
@@ -133,7 +133,7 @@
       max-width: 370px;
     }
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 370px;
   }
   @media screen and (min-width: 1200px) {
