@@ -206,6 +206,10 @@
 
 .mobile-social {
   display: flex;
+
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+  }
 }
 .mobile-social__item {
   padding-left: 10px;
